@@ -3,3 +3,12 @@ os:
   - linux
 julia:
   - 1.0
+
+notifications:
+  email: false
+
+script:
+  - julia -e 'using Pkg; Pkg.test("LambertWDiff"; coverage=true)'
+
+after_success:
+  - julia -e 'Pkg.add("Coverage"); cd(Pkg.dir("LambertWDiff")); using Coverage; Coveralls.submit(process_folder()); Codecov.submit(process_folder())'
