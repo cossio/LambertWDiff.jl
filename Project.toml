@@ -1,0 +1,14 @@
+name = "LambertWDiff"
+uuid = "087ca3a8-c5dc-11e8-0c88-217f8e0e47c3"
+authors = ["Jorge Fernandez-de-Cossio-Diaz <j.cossio.diaz@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+ForwardDiff = "f6369f11-7733-5829-9624-2563aa707210"
+LambertW = "984bce1d-4616-540c-a9ee-88d1112d94c9"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
